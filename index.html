@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anna & Erik – 12 June 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1f2a44;
+    --sky: #eaf0f7;
+    --berry: #a3314b;
+    --sage: #8fa68e;
+    --paper: #ffffff;
+    --display: "Young Serif", Georgia, serif;
+    --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+  }
+  a { color: var(--berry); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--berry); outline-offset: 3px; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  nav { padding: 1rem 0; border-bottom: 1px solid var(--sky); }
+  nav .wrap { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end; }
+  nav a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  nav a:hover { color: var(--berry); }
+
+  .hero { background: var(--sky); padding: 5rem 0 4rem; }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3.5rem, 13vw, 9rem);
+    line-height: 0.95;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 span { display: block; }
+  .hero h1 .and { color: var(--berry); font-size: 0.5em; margin: 0.1em 0; }
+  .hero p { font-size: 1.25rem; margin: 0 0 2rem; max-width: 32rem; }
+  .count { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .count div { min-width: 4.5rem; }
+  .count strong { display: block; font-family: var(--display); font-weight: 400; font-size: 2.5rem; line-height: 1; }
+  .count span { font-size: 0.95rem; }
+
+  section { padding: 4rem 0; }
+  h2 { font-family: var(--display); font-weight: 400; font-size: 2.25rem; margin: 0 0 1.5rem; }
+  .grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .grid h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+  .grid p { margin: 0; }
+
+  .timeline { list-style: none; margin: 0; padding: 0; border-left: 3px solid var(--sage); }
+  .timeline li { padding: 0 0 1.5rem 1.5rem; position: relative; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -0.6rem; top: 0.4rem;
+    width: 1rem; height: 1rem; border-radius: 50%; background: var(--berry);
+  }
+  .timeline time { font-weight: 600; display: block; }
+
+  .alt { background: var(--sky); }
+  .rsvp { text-align: left; }
+  .btn {
+    display: inline-block; background: var(--berry); color: #fff;
+    padding: 0.85rem 1.75rem; border-radius: 0.25rem;
+    font-weight: 600; text-decoration: none;
+  }
+  .btn:hover { background: #8a2740; }
+
+  footer { padding: 2rem 0; border-top: 1px solid var(--sky); font-size: 0.95rem; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#details">Details</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#travel">Travel</a>
+    <a href="#rsvp">RSVP</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1><span>Anna</span><span class="and">and</span><span>Erik</span></h1>
+    <p>We’re getting married on Saturday, 12 June 2027, and we’d love for you to be there.</p>
+    <div class="count" aria-live="off">
+      <div><strong id="d">–</strong><span>days</span></div>
+      <div><strong id="h">–</strong><span>hours</span></div>
+      <div><strong id="m">–</strong><span>minutes</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="details">
+    <div class="wrap">
+      <h2>Details</h2>
+      <div class="grid">
+        <div>
+          <h3>Date</h3>
+          <p>Saturday, 12 June 2027</p>
+        </div>
+        <div>
+          <h3>Place</h3>
+          <p>Example Manor<br>Sample Road 1, 123 45 Townname</p>
+        </div>
+        <div>
+          <h3>Dress code</h3>
+          <p>Summer formal. The ceremony is outdoors, so bring a light jacket.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="alt">
+    <div class="wrap">
+      <h2>Schedule</h2>
+      <ol class="timeline">
+        <li><time>14:00</time>Guests arrive and welcome drinks</li>
+        <li><time>15:00</time>Ceremony in the garden</li>
+        <li><time>16:00</time>Photos and mingling</li>
+        <li><time>18:00</time>Dinner and speeches</li>
+        <li><time>21:00</time>Dancing until late</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="travel">
+    <div class="wrap">
+      <h2>Getting there</h2>
+      <div class="grid">
+        <div>
+          <h3>By car</h3>
+          <p>Free parking is available at the venue. Please carpool if you can.</p>
+        </div>
+        <div>
+          <h3>By train and bus</h3>
+          <p>Take the train to Townname station, then bus 12 to Sample Road. We’ll also run a shuttle at 13:30.</p>
+        </div>
+        <div>
+          <h3>Where to stay</h3>
+          <p>Hotel Example, 5 minutes from the venue, has a room block under “Anna and Erik”. Book before 1 May.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="alt">
+    <div class="wrap rsvp">
+      <h2>RSVP</h2>
+      <p>Please reply by 1 May 2027 and tell us about any food allergies.</p>
+      <!-- Replace the # below with the link to your Google Form -->
+      <a class="btn" href="#">Reply to the invitation</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Questions? Email us at <a href="mailto:hello@example.com">hello@example.com</a></div>
+</footer>
+
+<script>
+  // Change this date to your wedding day and time
+  var target = new Date("2027-06-12T15:00:00");
+  function tick() {
+    var diff = Math.max(0, target - new Date());
+    var mins = Math.floor(diff / 60000);
+    document.getElementById("d").textContent = Math.floor(mins / 1440);
+    document.getElementById("h").textContent = Math.floor((mins % 1440) / 60);
+    document.getElementById("m").textContent = mins % 60;
+  }
+  tick();
+  setInterval(tick, 30000);
+</script>
+</body>
+</html>
