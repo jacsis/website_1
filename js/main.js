@@ -58,6 +58,9 @@
     document.querySelectorAll("[data-directions]").forEach(el => {
       el.href = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(CONFIG[el.dataset.directions]);
     });
+    document.querySelectorAll("[data-mapslink]").forEach(el => {
+      el.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CONFIG[el.dataset.mapslink]);
+    });
     document.querySelectorAll("[data-href]").forEach(el => {
       const url = CONFIG[el.dataset.href];
       if (url) el.href = url; else el.classList.add("hidden");
