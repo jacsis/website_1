@@ -19,32 +19,29 @@
   </div>
 
   <section class="section" style="padding-top:2rem">
-    <div class="grid-2">
-      <article class="panel reveal">
-        <p class="kicker" style="opacity:1;animation:none"><span lang="it">Cerimonia</span><span lang="en">Ceremony</span></p>
-        <h2 data-cfg="ceremonyName"></h2>
-        <p class="time"><span lang="it">ore</span><span lang="en">at</span> <span data-cfg="ceremonyTime"></span></p>
-        <p class="place muted" data-cfg="ceremonyAddress"></p>
-        <iframe class="map" data-map="ceremonyAddress" loading="lazy" title="Map ceremony"></iframe>
-        <div class="btn-row"><a class="btn" data-directions="ceremonyAddress" target="_blank" rel="noopener"><span lang="it">Indicazioni</span><span lang="en">Directions</span></a></div>
-      </article>
-
-      <article class="panel reveal">
-        <p class="kicker" style="opacity:1;animation:none"><span lang="it">Ricevimento</span><span lang="en">Reception</span></p>
-        <h2 data-cfg="receptionName"></h2>
-        <p class="time"><span lang="it">dalle ore</span><span lang="en">from</span> <span data-cfg="receptionTime"></span></p>
-        <p class="place muted" data-cfg="receptionAddress"></p>
-        <iframe class="map" data-map="receptionAddress" loading="lazy" title="Map reception"></iframe>
-        <div class="btn-row"><a class="btn blue" data-directions="receptionAddress" target="_blank" rel="noopener"><span lang="it">Indicazioni</span><span lang="en">Directions</span></a></div>
-      </article>
-    </div>
+    <article class="panel reveal venue">
+      <div class="venue-info">
+        <p class="kicker" style="opacity:1;animation:none"><span lang="it">Cerimonia e pranzo</span><span lang="en">Ceremony &amp; lunch</span></p>
+        <h2 data-cfg="venueName"></h2>
+        <p class="place muted" data-cfg="venueAddress"></p>
+        <ul class="timeline">
+          <li><span class="time" data-cfg="ceremonyTime"></span><span><span lang="it">Cerimonia</span><span lang="en">Ceremony</span></span></li>
+          <li><span class="time" data-cfg="lunchTime"></span><span><span lang="it">Pranzo e festa</span><span lang="en">Lunch &amp; party</span></span></li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn" data-directions="mapQuery" target="_blank" rel="noopener"><span lang="it">Indicazioni</span><span lang="en">Directions</span></a>
+          <a class="btn ghost" data-mapslink="mapQuery" target="_blank" rel="noopener"><span lang="it">Apri in Google Maps</span><span lang="en">Open in Google Maps</span></a>
+        </div>
+      </div>
+      <iframe class="map" data-map="mapQuery" loading="lazy" title="Antico Fio map"></iframe>
+    </article>
 
     <div class="grid-2" style="margin-top:1.5rem">
       <article class="panel reveal">
         <h2 style="font-size:1.6rem"><span lang="it">Come arrivare</span><span lang="en">Getting there</span></h2>
         <p class="muted">
-          <span lang="it">Il parcheggio è disponibile presso il luogo del ricevimento. Se arrivate in treno o in aereo, scriveteci e vi aiuteremo a organizzarvi.</span>
-          <span lang="en">Parking is available at the reception venue. If you're arriving by train or plane, write to us and we'll help you get organised.</span>
+          <span lang="it">Antico Fio si trova nelle colline del Casentino, vicino a Poppi. Se arrivate in treno o in aereo, scriveteci e vi aiuteremo a organizzarvi.</span>
+          <span lang="en">Antico Fio is in the Casentino hills near Poppi, Tuscany. If you're arriving by train or plane, write to us and we'll help you get organised.</span>
         </p>
       </article>
       <article class="panel reveal">
