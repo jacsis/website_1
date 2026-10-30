@@ -2,22 +2,19 @@
    WEDDING SETTINGS — edit only this file to fill in details
    ========================================================= */
 const CONFIG = {
-  // Date and time of the ceremony (local time, ISO format)
-  weddingDate: "2027-06-12T16:00:00",
+  // Date and time of the ceremony (local time, ISO format) — used by the countdown
+  weddingDate: "2027-10-09T11:00:00",
 
   // Shown on the pages
-  dateText: { it: "12 Giugno 2027", en: "June 12, 2027" },
-  cityText: "Firenze, Italia",
+  dateText: { it: "9 Ottobre 2027", en: "October 9, 2027" },
+  cityText: "Poppi (AR), Italia",
 
-  // Ceremony
-  ceremonyName: "Nome della chiesa / del luogo",
-  ceremonyAddress: "Via Esempio 1, 50100 Firenze FI",
-  ceremonyTime: "16:00",
-
-  // Reception / party
-  receptionName: "Nome della villa / del ristorante",
-  receptionAddress: "Via Esempio 2, 50100 Firenze FI",
-  receptionTime: "19:00",
+  // Venue — ceremony and lunch are both here
+  venueName: "Antico Fio",
+  venueAddress: "Loc. Fio di Sopra, 52014 Poppi (AR)",
+  mapQuery: "Agriturismo Antico Fio, Fio di Sopra, 52014 Poppi AR, Italia",  // what Google Maps searches for
+  ceremonyTime: "11:00",      // TODO: put the real time
+  lunchTime: "13:00",         // TODO: put the real time
 
   // Gifts
   iban: "IT00 X000 0000 0000 0000 0000 000",
@@ -28,7 +25,7 @@ const CONFIG = {
   // If left empty, the form opens the guest's e-mail app instead.
   rsvpEndpoint: "",
   rsvpEmail: "jacopo.sisti90@gmail.com",
-  rsvpDeadline: { it: "1 Maggio 2027", en: "May 1, 2027" },
+  rsvpDeadline: { it: "1 Agosto 2027", en: "August 1, 2027" },
 
   // Photos — link to a shared upload folder (e.g. Dropbox File Request or Google Photos shared album)
   photoUploadUrl: "https://www.dropbox.com/request/XXXXXXXX",
