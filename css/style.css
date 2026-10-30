@@ -203,6 +203,15 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.15; }
   word-break: break-all; margin-top: 1rem;
 }
 
+.venue { display: grid; grid-template-columns: 1fr 1.3fr; gap: 2rem; align-items: center; }
+.venue .map { height: 360px; margin-top: 0; }
+@media (max-width: 760px) { .venue { grid-template-columns: 1fr; } .venue .map { height: 280px; } }
+.timeline { list-style: none; margin-top: 1.4rem; border-left: 2px solid var(--peach); padding-left: 1.2rem; display: grid; gap: .9rem; }
+.timeline li { position: relative; display: flex; gap: 1rem; align-items: baseline; }
+.timeline li::before { content: ""; position: absolute; left: calc(-1.2rem - 7px); top: .55rem; width: 12px; height: 12px; border-radius: 50%; background: var(--tangerine); box-shadow: 0 0 0 4px var(--paper); }
+.timeline li:nth-child(2)::before { background: var(--hydrangea); }
+.timeline .time { min-width: 3.5rem; }
+
 /* ---------- form ---------- */
 .form { display: grid; gap: 1.3rem; }
 .field label, .field legend { display: block; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .45rem; color: var(--ink-soft); font-weight: 400; }
