@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foto · Photos — Jacopo &amp; Silvia</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="photos">
+
+  <div class="page-head">
+    <p class="kicker"><span lang="it">Condividi i ricordi</span><span lang="en">Share the memories</span></p>
+    <h1><span lang="it">Le vostre foto</span><span lang="en">Your photos</span></h1>
+    <p>
+      <span lang="it">Voi vedrete momenti che noi ci perderemo! Caricate qui le foto e i video scattati durante la giornata.</span>
+      <span lang="en">You'll catch moments we'll miss! Upload the photos and videos you take during the day.</span>
+    </p>
+  </div>
+
+  <section class="section" style="padding-top:2rem">
+    <div class="grid-2">
+      <article class="panel reveal" style="text-align:center">
+        <div style="font-size:2.6rem">📸</div>
+        <h2><span lang="it">Carica le foto</span><span lang="en">Upload photos</span></h2>
+        <p class="muted"><span lang="it">Non serve nessun account.</span><span lang="en">No account needed.</span></p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn" data-href="photoUploadUrl" target="_blank" rel="noopener"><span lang="it">Carica ora</span><span lang="en">Upload now</span></a>
+        </div>
+        <p class="hashtag" style="margin-top:1.2rem" data-cfg="hashtag"></p>
+      </article>
+
+      <article class="panel reveal" style="text-align:center">
+        <h2 style="font-size:1.6rem"><span lang="it">Inquadra il QR</span><span lang="en">Scan the QR code</span></h2>
+        <div style="margin:1rem 0"><div id="qr"></div></div>
+        <ol class="steps" style="text-align:left;max-width:320px;margin:0 auto">
+          <li><span lang="it">Apri la fotocamera e inquadra il codice</span><span lang="en">Open your camera and scan the code</span></li>
+          <li><span lang="it">Scegli foto e video dalla galleria</span><span lang="en">Pick photos and videos from your gallery</span></li>
+          <li><span lang="it">Premi carica — fatto! 🧡</span><span lang="en">Tap upload — done! 🧡</span></li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

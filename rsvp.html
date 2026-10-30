@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSVP — Jacopo &amp; Silvia</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="rsvp">
+
+  <div class="page-head">
+    <p class="kicker"><span lang="it">Conferma la tua presenza</span><span lang="en">Kindly reply</span></p>
+    <h1>RSVP</h1>
+    <p>
+      <span lang="it">Vi chiediamo gentilmente di rispondere entro il</span>
+      <span lang="en">Please let us know by</span>
+      <b style="font-weight:400" data-cfg="rsvpDeadline"></b>.
+    </p>
+  </div>
+
+  <section class="section" style="padding-top:2rem;max-width:720px">
+    <form class="panel form reveal" id="rsvpForm" novalidate>
+      <div class="field">
+        <label for="name"><span lang="it">Nome e cognome</span><span lang="en">Full name</span> *</label>
+        <input type="text" id="name" name="name" required data-ph-it="Es. Maria Rossi" data-ph-en="e.g. Mary Smith">
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" data-ph-it="nome@email.com" data-ph-en="name@email.com">
+      </div>
+
+      <fieldset class="field">
+        <legend><span lang="it">Ci sarai?</span><span lang="en">Will you attend?</span> *</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="attending" value="yes" required><span><span lang="it">Sì, con gioia! 🎉</span><span lang="en">Yes, with joy! 🎉</span></span></label>
+          <label class="choice"><input type="radio" name="attending" value="no"><span><span lang="it">Purtroppo no</span><span lang="en">Sadly, no</span></span></label>
+        </div>
+      </fieldset>
+
+      <div id="attendingDetails" class="hidden" style="display:grid;gap:1.3rem">
+        <div class="field">
+          <label for="guests"><span lang="it">Numero di persone (te incluso/a)</span><span lang="en">Number of guests (including you)</span></label>
+          <input type="number" id="guests" name="guests" min="1" max="10" value="1">
+        </div>
+
+        <fieldset class="field">
+          <legend><span lang="it">Alimentazione</span><span lang="en">Diet</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="diet" value="vegetarian"><span><span lang="it">Vegetariano</span><span lang="en">Vegetarian</span></span></label>
+            <label class="choice"><input type="checkbox" name="diet" value="vegan"><span><span lang="it">Vegano</span><span lang="en">Vegan</span></span></label>
+            <label class="choice"><input type="checkbox" name="diet" value="kids menu"><span><span lang="it">Menù bambini</span><span lang="en">Kids menu</span></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend><span lang="it">Hai allergie o intolleranze alimentari?</span><span lang="en">Do you have any food allergies or intolerances?</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="allergies" value="no" checked><span>No</span></label>
+            <label class="choice"><input type="radio" name="allergies" value="yes"><span><span lang="it">Sì</span><span lang="en">Yes</span></span></label>
+          </div>
+        </fieldset>
+
+        <div id="allergyBox" class="allergy-box hidden">
+          <fieldset class="field">
+            <legend><span lang="it">Quali?</span><span lang="en">Which ones?</span></legend>
+            <div class="choices">
+              <label class="choice"><input type="checkbox" name="allergens" value="gluten"><span><span lang="it">Glutine</span><span lang="en">Gluten</span></span></label>
+              <label class="choice"><input type="checkbox" name="allergens" value="lactose"><span><span lang="it">Lattosio</span><span lang="en">Lactose</span></span></label>
+              <label class="choice"><input type="checkbox" name="allergens" value="nuts"><span><span lang="it">Frutta a guscio</span><span lang="en">Tree nuts</span></span></label>
+              <label class="choice"><input type="checkbox" name="allergens" value="peanuts"><span><span lang="it">Arachidi</span><span lang="en">Peanuts</span></span></label>
+              <label class="choice"><input type="checkbox" name="allergens" value="shellfish"><span><span lang="it">Crostacei / molluschi</span><span lang="en">Shellfish</span></span></label>
+              <label class="choice"><input type="checkbox" name="allergens" value="fish"><span><span lang="it">Pesce</span><span lang="en">Fish</span></span></label>
+              <label class="choice"><input type="checkbox" name="allergens" value="eggs"><span><span lang="it">Uova</span><span lang="en">Eggs</span></span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="allergy_details"><span lang="it">Altro / dettagli (e per chi)</span><span lang="en">Other / details (and for whom)</span></label>
+            <textarea id="allergy_details" name="allergy_details" data-ph-it="Es. Marco: celiaco" data-ph-en="e.g. Mark: coeliac"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message"><span lang="it">Un messaggio per gli sposi</span><span lang="en">A message for the couple</span></label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+
+      <div style="text-align:center">
+        <button class="btn" type="submit"><span lang="it">Invia risposta</span><span lang="en">Send reply</span></button>
+      </div>
+      <div id="formMsg" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

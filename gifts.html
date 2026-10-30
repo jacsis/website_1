@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regali · Gifts — Jacopo &amp; Silvia</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="gifts">
+
+  <div class="page-head">
+    <p class="kicker"><span lang="it">Lista nozze</span><span lang="en">Wedding gifts</span></p>
+    <h1><span lang="it">Regali</span><span lang="en">Gifts</span></h1>
+    <p>
+      <span lang="it">La vostra presenza è il regalo più grande. Se però desiderate farci un pensiero, ci aiuterete a realizzare il nostro viaggio di nozze.</span>
+      <span lang="en">Your presence is the greatest gift. If you'd still like to give us something, you can help us make our honeymoon come true.</span>
+    </p>
+  </div>
+
+  <section class="section" style="padding-top:2rem;max-width:760px">
+    <article class="panel reveal" style="text-align:center">
+      <div style="font-size:2.6rem">✈️</div>
+      <h2><span lang="it">Il nostro viaggio</span><span lang="en">Our honeymoon</span></h2>
+      <p class="muted">
+        <span lang="it">Potete contribuire con un bonifico a:</span>
+        <span lang="en">You can contribute with a bank transfer to:</span>
+      </p>
+      <p style="margin-top:.6rem"><b style="font-weight:400" data-cfg="ibanHolder"></b></p>
+      <div class="iban" data-cfg="iban"></div>
+      <div class="btn-row" style="justify-content:center">
+        <button class="btn" id="copyIban"><span lang="it">Copia IBAN</span><span lang="en">Copy IBAN</span></button>
+        <a class="btn blue" data-href="giftListUrl" target="_blank" rel="noopener"><span lang="it">Lista desideri</span><span lang="en">Wish list</span></a>
+      </div>
+      <p class="muted" style="margin-top:1.4rem;font-size:.92rem">
+        <span lang="it">Causale suggerita: "Regalo di nozze – il vostro nome". Grazie di cuore! 🧡</span>
+        <span lang="en">Suggested reference: "Wedding gift – your name". Thank you from the bottom of our hearts! 🧡</span>
+      </p>
+    </article>
+  </section>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

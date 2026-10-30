@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luogo · Location — Jacopo &amp; Silvia</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="location">
+
+  <div class="page-head">
+    <p class="kicker"><span lang="it">Dove e quando</span><span lang="en">Where &amp; when</span></p>
+    <h1><span lang="it">Il luogo</span><span lang="en">The location</span></h1>
+    <p><span data-cfg="dateText"></span> · <span data-cfg="cityText"></span></p>
+  </div>
+
+  <section class="section" style="padding-top:2rem">
+    <div class="grid-2">
+      <article class="panel reveal">
+        <p class="kicker" style="opacity:1;animation:none"><span lang="it">Cerimonia</span><span lang="en">Ceremony</span></p>
+        <h2 data-cfg="ceremonyName"></h2>
+        <p class="time"><span lang="it">ore</span><span lang="en">at</span> <span data-cfg="ceremonyTime"></span></p>
+        <p class="place muted" data-cfg="ceremonyAddress"></p>
+        <iframe class="map" data-map="ceremonyAddress" loading="lazy" title="Map ceremony"></iframe>
+        <div class="btn-row"><a class="btn" data-directions="ceremonyAddress" target="_blank" rel="noopener"><span lang="it">Indicazioni</span><span lang="en">Directions</span></a></div>
+      </article>
+
+      <article class="panel reveal">
+        <p class="kicker" style="opacity:1;animation:none"><span lang="it">Ricevimento</span><span lang="en">Reception</span></p>
+        <h2 data-cfg="receptionName"></h2>
+        <p class="time"><span lang="it">dalle ore</span><span lang="en">from</span> <span data-cfg="receptionTime"></span></p>
+        <p class="place muted" data-cfg="receptionAddress"></p>
+        <iframe class="map" data-map="receptionAddress" loading="lazy" title="Map reception"></iframe>
+        <div class="btn-row"><a class="btn blue" data-directions="receptionAddress" target="_blank" rel="noopener"><span lang="it">Indicazioni</span><span lang="en">Directions</span></a></div>
+      </article>
+    </div>
+
+    <div class="grid-2" style="margin-top:1.5rem">
+      <article class="panel reveal">
+        <h2 style="font-size:1.6rem"><span lang="it">Come arrivare</span><span lang="en">Getting there</span></h2>
+        <p class="muted">
+          <span lang="it">Il parcheggio è disponibile presso il luogo del ricevimento. Se arrivate in treno o in aereo, scriveteci e vi aiuteremo a organizzarvi.</span>
+          <span lang="en">Parking is available at the reception venue. If you're arriving by train or plane, write to us and we'll help you get organised.</span>
+        </p>
+      </article>
+      <article class="panel reveal">
+        <h2 style="font-size:1.6rem"><span lang="it">Dress code</span><span lang="en">Dress code</span></h2>
+        <p class="muted">
+          <span lang="it">Elegante e allegro: i colori dei fiori — arancio, pesca e azzurro — sono benvenuti!</span>
+          <span lang="en">Elegant and joyful: the colours of our flowers — orange, peach and soft blue — are very welcome!</span>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
